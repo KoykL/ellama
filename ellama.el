@@ -399,7 +399,7 @@ In BUFFER at POINT will be inserted result between PREFIX and SUFFIX."
      ellama--code-prefix
      ellama--code-suffix
      (current-buffer)
-     (point))))
+     end)))
 
 ;;;###autoload
 (defun ellama-fim-code ()
