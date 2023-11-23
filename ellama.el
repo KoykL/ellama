@@ -395,9 +395,7 @@ In BUFFER at POINT will be inserted result between PREFIX and SUFFIX."
 		(point-max)))
 	 (text (buffer-substring-no-properties beg end)))
     (ellama-stream-filter
-     (format
-      "Continue the following code, only write new code in format ```language\n...\n```:\n```\n%s\n```"
-      text)
+     text
      ellama--code-prefix
      ellama--code-suffix
      (current-buffer)
