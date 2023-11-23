@@ -410,19 +410,19 @@ In BUFFER at POINT will be inserted result between PREFIX and SUFFIX."
 		(point-min)))
 	 (end (point))
 	 (before (buffer-substring-no-properties beg end)))
-  (let* ((beg (point))
-	 (end (if (region-active-p)
-		  (region-end)
-		(point-max)))
-	 (after (buffer-substring-no-properties beg end)))
-    (ellama-stream-filter
-     (format
-      "%s <FILL> %s"
-      before after)
-     ellama--code-prefix
-     ellama--code-suffix
-     (current-buffer)
-     end)))
+  	(let* ((beg (point))
+	 	(end (if (region-active-p)
+		  	(region-end)
+			(point-max)))
+	 	(after (buffer-substring-no-properties beg end)))
+    	(ellama-stream-filter
+     		(format
+      		"%s <FILL> %s"
+      		before after)
+     	ellama--code-prefix
+     	ellama--code-suffix
+     	(current-buffer)
+     	end))))
 
 ;;;###autoload
 (defun ellama-add-code (description)
