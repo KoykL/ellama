@@ -417,12 +417,12 @@ In BUFFER at POINT will be inserted result between PREFIX and SUFFIX."
 	 	(after (buffer-substring-no-properties beg end)))
     	(ellama-stream-filter
      		(format
-      		"%s <FILL> %s"
+      		"<｜fim▁begin｜>%s <｜fim▁hole｜> %s<｜fim▁end｜>"
       		before after)
      	ellama--code-prefix
      	ellama--code-suffix
      	(current-buffer)
-     	end))))
+     	(point)))))
 
 ;;;###autoload
 (defun ellama-add-code (description)
